@@ -31,5 +31,3 @@ Nous croyons en la divulgation responsable des vulnérabilités et nous appréci
 Nous sommes reconnaissants envers la communauté pour son soutien continu dans l'amélioration de la sécurité de notre projet.
 
 ---
-
-Note: Assurez-vous de remplacer [bastien.roc@edu.devinci.fr](bastien.roc@edu.devinci.fr) par une adresse e-mail valide pour la notification des vulnérabilités, et personnalisez le texte en fonction des besoins spécifiques de votre projet.
