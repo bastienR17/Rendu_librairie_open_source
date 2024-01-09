@@ -23,10 +23,6 @@ jobs:
       - name: 'babel'
         run: npm update jest @babel/core @babel/preset-env
 
-      - name: 'Clear cache'
-        run: npm run clear-cache
-
-
       - name: 'Run tests'
         run: npm test
 
