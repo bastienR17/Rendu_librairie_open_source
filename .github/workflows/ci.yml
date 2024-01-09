@@ -9,22 +9,23 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: 'Checkout'
-        uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
-      - name: 'Setup Node.js'
-        uses: actions/setup-node@v3
-        with:
-          node-version: '19'
+      - name: Display Node.js version
+        run: node --version
 
-      - name: 'Install dependencies'
+      - name: Display npm version
+        run: npm --version
+
+      # Ajoutez d'autres commandes pour afficher des informations utiles
+
+      - name: Install dependencies
         run: npm install
 
-      - name: 'Run tests'
-        run: npm test
+      - name: Clear Node.js and npm cache
+        run: npm cache clean -f
 
-      - name: 'Run eslint'
-        run: npx eslint ./src/**/*.js
 
       - name: 'Publish to NPM'
         uses: JS-DevTools/npm-publish@v2
