@@ -18,7 +18,7 @@ jobs:
           node-version: '14' # Utilisez une version de Node.js prise en charge et stable
 
       - name: Install dependencies
-        run: npm ci # Utilisez `npm ci` pour une installation plus rapide et basée sur le fichier package-lock.json
+        run: npm install  # Utilisez `npm ci` pour une installation plus rapide et basée sur le fichier package-lock.json
 
       - name: Run tests
         run: npm test
