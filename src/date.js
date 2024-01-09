@@ -1,8 +1,7 @@
 /**
  * Récupère la date depuis l'API NASA.
  *
- Sdt.ft — Aujourd’hui à 23:04
- * @returns {Promise<{ date: YYYY-MM-DD, url: string }>} La date de l'image.
+ * @returns {Promise<{ date: string, url: string }>} La date de l'image.
  * @throws {Error} Si la date n'est pas trouvée dans la réponse de l'API NASA.
  */
 const getDate = async () => {
