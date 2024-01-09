@@ -1,7 +1,9 @@
-name: Continious Integration
+name: Continuous Integration
 
 on:
   push:
+    branches:
+      - main
 
 jobs:
   ci:
@@ -20,8 +22,7 @@ jobs:
       - name: 'Install dependencies'
         run: npm install
 
-
-      - name: 'babel'
+      - name: 'Babel setup'
         run: npm install --save-dev babel-jest @babel/core @babel/preset-env
 
       - name: 'Run tests'
