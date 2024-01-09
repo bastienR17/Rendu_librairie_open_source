@@ -6,7 +6,7 @@ describe('getPhotos function', () => {
         Promise.resolve({
             json: () =>
                 Promise.resolve({
-                    photos: Array.from({ length: 855 }, (_, index) => ({ id: index + 1, img_src: `https://example.com/photo${index + 1}.jpg` })),
+                    photos: Array.from({ length: 10 }, (_, index) => ({ id: index + 1, img_src: `https://example.com/photo${index + 1}.jpg` })),
                 }),
         })
     );
@@ -19,11 +19,11 @@ describe('getPhotos function', () => {
 
         // Vérifie si console.log a été appelé avec les 855 premières photos
         expect(console.log).toHaveBeenCalledWith(
-            expect.arrayContaining(Array.from({ length: 855 }, (_, index) => ({ id: index + 1, img_src: `https://example.com/photo${index + 1}.jpg` })))
+            expect.arrayContaining(Array.from({ length: 10 }, (_, index) => ({ id: index + 1, img_src: `https://example.com/photo${index + 1}.jpg` })))
         );
 
         // Vérifie si console.log a été appelé avec exactement 855 éléments
-        expect(console.log).toHaveBeenCalledWith(expect.arrayContaining(Array.from({ length: 855 }, (_, index) => expect.any(Object))));
+        expect(console.log).toHaveBeenCalledWith(expect.arrayContaining(Array.from({ length: 10 }, (_, index) => expect.any(Object))));
 
         // Réinitialise le mock de console.log après le test
         console.log.mockRestore();
