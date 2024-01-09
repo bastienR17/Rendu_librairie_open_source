@@ -1,4 +1,4 @@
-name: Continuous Integration
+name: Continious Integration
 
 on:
   push:
@@ -9,25 +9,24 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      - name: 'Checkout'
         uses: actions/checkout@v4
 
       - name: 'Setup Node.js'
         uses: actions/setup-node@v3
         with:
-         node-version: '19'
+          node-version: '19'
 
-      - name: Install dependencies
+      - name: 'Install dependencies'
         run: npm install
 
-      - name: Run tests
+      - name: 'Run tests'
         run: npm test
 
-      - name: Run eslint
+      - name: 'Run eslint'
         run: npx eslint ./src/**/*.js
 
-      - name: Publish to NPM
+      - name: 'Publish to NPM'
         uses: JS-DevTools/npm-publish@v2
         with:
-          token: ${{ secrets.NPM_TOKEN }} # Assurez-vous que la clé secrète NPM est correcte et sécurisée
-
+          token: ${{ secrets.NPM_SECRET }}
