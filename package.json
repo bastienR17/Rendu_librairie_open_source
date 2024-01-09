@@ -1,10 +1,8 @@
 {
   "name": "lyb_naza_a3",
-  "version": "1.0.2",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
-  "type": "module",
-
   "scripts": {
     "test": "jest",
     "release": "release-it"
@@ -15,6 +13,7 @@
     "jest": "^29.7.0",
     "user": "^0.0.0"
   },
+  "type": "module",
   "devDependencies": {
     "@babel/core": "^7.23.7",
     "@babel/preset-env": "^7.23.7",
