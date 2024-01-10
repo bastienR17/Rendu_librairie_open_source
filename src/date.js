@@ -1,6 +1,5 @@
 /**
  * Récupère la date depuis l'API NASA.
- * I am tired
  *
  * @returns {Promise<{ date: YYYY-MM-DD, url: string }>} La date de l'image.
  * @throws {Error} Si la date n'est pas trouvée dans la réponse de l'API NASA.
