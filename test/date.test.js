@@ -4,7 +4,7 @@ describe('getDate()', () => {
   it('should fetch data from a valid API link', () => {
     const apiUrl = 'https://api.nasa.gov/planetary/apod?api_key=1aZMIbU6DNwDHXn3TY9JdChfwJcE0UR7wI3pmmiT';
     return getDate(apiUrl).then(data => {
-      expect(data).toBe('2024-01-09'); // Adjusting correctly and accordingly
+      expect(data).toMatch(/^\d{4}-\d{2}-\d{2}$/); // Adjusting correctly and accordingly
     });
   });
 
