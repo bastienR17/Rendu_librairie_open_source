@@ -11,3 +11,4 @@ getPhotos().then(console.log);
 
 
 console.log(img());
+
