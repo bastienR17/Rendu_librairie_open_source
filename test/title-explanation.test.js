@@ -8,6 +8,7 @@ describe('getTitleExplanationInfo()', () => {
       expect(data.explanation).toBeDefined();
     });
   });
+  
 
   it('should handle errors for an invalid API link', async () => {
     const invalidApiUrl = 'https://example.com/api/invalid';
