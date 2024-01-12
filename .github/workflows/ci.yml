@@ -7,8 +7,9 @@ jobs:
   ci:
     name: CI
     runs-on: ubuntu-latest
-
     steps:
+      - name: Clear npm cache
+        run: npm cache clean --force
       - name: 'Checkout'
         uses: actions/checkout@v4
 
@@ -20,6 +21,9 @@ jobs:
       - name: 'Install dependencies'
         run: npm install
 
+      - name: 'Babel setup'
+        run: npm install --save-dev babel-jest @babel/core @babel/preset-env
+
       - name: 'Run tests'
         run: npm test
 
@@ -30,3 +34,4 @@ jobs:
         uses: JS-DevTools/npm-publish@v2
         with:
           token: ${{ secrets.NPM_SECRET }}
+
